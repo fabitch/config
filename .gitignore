@@ -1,0 +1,8 @@
+.idea
+
+# __________Home Assistant__________
+home-assistant/**/*.log
+home-assistant/**/*.log.*
+home-assistant/**/*.db
+home-assistant/config/.storage
+home-assistant/config/secrets.yaml
