@@ -6,3 +6,9 @@ home-assistant/**/*.log.*
 home-assistant/**/*.db
 home-assistant/config/.storage
 home-assistant/config/secrets.yaml
+
+
+# __________Mosguitto__________
+home-assistant/data
+home-assistant/log
+home-assistant/config/**.passwd

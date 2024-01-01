@@ -10,3 +10,10 @@ services:
     restart: unless-stopped
     privileged: true
     network_mode: host
+  mqtt:
+    image: eclipse-mosquitto:latest
+    network_mode: host
+    volumes:
+      - ./mqtt-conf:/mosquitto/conf
+      - ./data:/mosquitto/data
+      - ./logs:/mosquitto/log
