@@ -1,0 +1,45 @@
+- id: '1704136246748'
+  name: Schlafen
+  entities:
+    cover.shellyswitch25_c8c9a37502e3:
+      current_position: 0
+      device_class: shutter
+      friendly_name: Rolladen Schlafzimmer Rechts
+      supported_features: 15
+      state: closed
+    cover.shellyswitch25_c8c9a37a21a0:
+      current_position: 0
+      device_class: shutter
+      friendly_name: Rolladen Schlafzimmer Links
+      supported_features: 15
+      state: closed
+  icon: mdi:bed
+  metadata: {}
+- id: '1704138226676'
+  name: Aufstehen
+  entities:
+    cover.shellyswitch25_c8c9a37502e3:
+      current_position: 100
+      device_class: shutter
+      friendly_name: Rolladen Schlafzimmer Rechts
+      supported_features: 15
+      state: open
+    cover.shellyswitch25_c8c9a37a21a0:
+      current_position: 100
+      device_class: shutter
+      friendly_name: Rolladen Schlafzimmer Links
+      supported_features: 15
+      state: open
+  icon: mdi:sun-clock
+  metadata: {}
+- id: '1706956834561'
+  name: Sammy aufstehen
+  entities:
+    cover.rolladen_kleines_schlafzimmer:
+      device_class: shutter
+      icon: mdi:blinds
+      friendly_name: Rolladen Kleines Schlafzimmer
+      supported_features: 11
+      state: open
+  icon: mdi:bed
+  metadata: {}

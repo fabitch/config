@@ -1,1 +1,75 @@
-[]
+- id: '1704136189886'
+  alias: Schlafen
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.schlafen
+    metadata: {}
+  mode: single
+- id: '1704136691815'
+  alias: Aufwachen
+  description: ''
+  trigger:
+  - platform: time
+    at: 06:00:00
+  condition: []
+  action:
+  - service: scene.turn_on
+    target:
+      entity_id: scene.aufstehen
+    metadata: {}
+  - service: scene.turn_on
+    target:
+      entity_id: scene.sammy_aufstehen
+    metadata: {}
+  mode: single
+- id: '1704213415394'
+  alias: Bad lüften
+  description: Öffnet das Dachfenster im Bad, wenn die Luftfeuchtigkeit zu hoch ist.
+  trigger:
+  - type: value
+    platform: device
+    device_id: 8013ec95049e4451a34ffe917c7f4507
+    entity_id: 7d0ffc8ab0689f093aec622f9424e87b
+    domain: sensor
+    above: 55
+  condition: []
+  action:
+  - if:
+    - condition: state
+      entity_id: weather.forecast_home
+      state: rainy
+    then:
+    - device_id: e86d47a727a619c0f952e3a466add447
+      domain: cover
+      entity_id: 896747f65e62dd58d552f3b76a3a25c8
+      type: set_position
+      position: 36
+    else:
+    - device_id: e86d47a727a619c0f952e3a466add447
+      domain: cover
+      entity_id: 896747f65e62dd58d552f3b76a3a25c8
+      type: open
+  mode: single
+- id: '1704221111991'
+  alias: Bad lüften beenden
+  description: Schließt das Dachfenster, wenn Luftfeuchtigkeit unter 55% fällt
+  trigger:
+  - type: value
+    platform: device
+    device_id: 8013ec95049e4451a34ffe917c7f4507
+    entity_id: 7d0ffc8ab0689f093aec622f9424e87b
+    domain: sensor
+    below: 54
+  condition: []
+  action:
+  - device_id: e86d47a727a619c0f952e3a466add447
+    domain: cover
+    entity_id: 896747f65e62dd58d552f3b76a3a25c8
+    type: close
+  mode: single
