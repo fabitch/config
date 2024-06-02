@@ -1,0 +1,17 @@
+[font.bold]
+family = "Monokai Nerd Font"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Monokai Nerd Font"
+
+[font.normal]
+family = "Monokai Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
