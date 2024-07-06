@@ -19,8 +19,14 @@ apt install git
 Use [gnu stow]() to symlink all configurations made to the dotfiles to the root directory of the local machine. First clone this repo to the
 `$HOME` directory.
 
+On linux
 ```bash
 apt install stow
+```
+
+on mac
+```bash
+brew install stow
 ```
 
 Then run stow to create all symlinks to the `$HOME`
