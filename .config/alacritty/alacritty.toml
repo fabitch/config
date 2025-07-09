@@ -1,5 +1,5 @@
 [font.bold]
-family = "Monokai Nerd Font"
+family = "Mononoki Nerd Font"
 style = "Bold"
 
 [font.glyph_offset]
@@ -7,10 +7,10 @@ x = 0
 y = 0
 
 [font.italic]
-family = "Monokai Nerd Font"
+family = "Mononoki Nerd Font"
 
 [font.normal]
-family = "Monokai Nerd Font"
+family = "Mononoki Nerd Font"
 style = "Regular"
 
 [font.offset]
